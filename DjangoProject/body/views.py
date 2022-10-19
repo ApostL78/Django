@@ -71,3 +71,6 @@ def get_category(request, category_id):
 # merge to master from console
 
 # commit
+# commit3
+# commit3
+# commit3
