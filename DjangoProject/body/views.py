@@ -70,4 +70,4 @@ def get_category(request, category_id):
 # fldmgdfsdv
 # merge to master from console
 
-# commit
+# commit 2
