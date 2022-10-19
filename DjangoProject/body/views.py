@@ -67,10 +67,10 @@ def get_category(request, category_id):
 #     else:
 #         form = TaskForm()
 #     return render(request, 'body/add_task.html', {'form': form})
-# fldmgdfsdv
+
 # merge to master from console
 
-# commit
+# commit 2
 # commit3
 # commit3
 # commit3
