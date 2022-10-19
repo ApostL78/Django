@@ -2,8 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Task, Categories
 from .forms import TaskForm
 from django.views.generic import ListView, DetailView, CreateView
-
-
 # from django.urls import  reverse_lazy
 
 
@@ -11,8 +9,9 @@ class HomeTask(ListView):
     model = Task
     template_name = 'body/task_list.html'
     context_object_name = 'tasks'
-    extra_context = { 'title': 'Главная' }
-    allow_empty = False  # если пустой, то выведет 404
+    extra_context = {'title': 'Главная'}
+    allow_empty = False # если пустой, то выведет 404
+
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(HomeTask, self).get_context_data(**kwargs)
@@ -32,21 +31,21 @@ class ViewTask(ListView):
         return Task.objects.filter(category=self.kwargs['pk'])
     # pk_url_kwarg = 'category_id'
 
-
 class CreateTask(CreateView):
     form_class = TaskForm
     template_name = 'body/add_task.html'
     # success_url = reverse_lazy('home') лучше get_absolute_url в модели чем ето
 
 
-def about(request):
-    return render(request, 'body/about.html')
 
+def about(request):
+    return render(request,'body/about.html')
 
 def get_category(request, category_id):
     tasks = Task.objects.filter(category_id=category_id)
     category = Categories.objects.get(pk=category_id)
-    return render(request, 'body/category.html', { 'tasks': tasks, 'category': category })
+    return render(request, 'body/category.html', {'tasks': tasks, 'category': category})
+
 
 # def index(request):
 #     task = {
@@ -68,3 +67,4 @@ def get_category(request, category_id):
 #     else:
 #         form = TaskForm()
 #     return render(request, 'body/add_task.html', {'form': form})
+# fldmgdfsdv
