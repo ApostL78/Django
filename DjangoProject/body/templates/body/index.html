@@ -1,0 +1,39 @@
+{% extends 'body/base.html' %}
+{% load tasks_tags %}
+
+{% block navbar %}
+    {% get_categories as category %}
+    {% for item in category %}
+            <li class="nav-item"><a href="{{ item.get_absolute_url }}" class="nav-link">{{ item.title }}</a></li>
+    {% endfor %}
+            <li class="nav-item"><a href="add-task/" class="nav-link">Добавить задачу</a></li>
+{% endblock %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Главная страница</h1>
+    <p>Текст</p>
+<!--    {{ tasks.title }}-->
+
+    {% get_tasks as tasks %} <!-- its work cause of 2 line -->
+    {% for obj in tasks %}
+        <div class="media-body">
+            {% if obj.photo != 'No photo' %}
+                <img src="{{ obj.photo.url }}"  height="300px" alt="">
+            {% else %}
+                <img src='https://picsum.photos/seed/picsum/200/300' alt="">
+            {% endif %}
+            <div class="media">
+                 <div class="alert alert-warning mt-2">
+                <h3><font color='{% cycle "red" "green" %}'>{{ obj.title }}</font></h3>
+                <h3>Категория: {{ obj.category.title }}</h3>
+                <h3>{{ obj.created_at|date:'m-d-y h:m' }}, прошло времени: {{ obj.created_at|timesince }}</h3>
+                <p>{{ obj.task }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

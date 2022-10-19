@@ -1,0 +1,20 @@
+{% extends 'body/base.html' %}
+{% load tasks_tags %}
+
+{% block title %}
+Страница про меня
+{% endblock %}
+
+{% block navbar %}
+<li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
+{% endblock %}
+
+
+{% block content %}
+<h1>Страница про меня</h1>
+<p>Текст</p>
+{% endblock %}
+
+{% block for_inclusion_tags %}
+{% show_categories %}
+{% endblock %}

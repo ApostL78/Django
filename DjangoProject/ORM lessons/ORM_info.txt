@@ -1,0 +1,1 @@
+more info here: https://django.fun/docs/django/ru/4.0/ref/models/querysets/

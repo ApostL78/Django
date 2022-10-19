@@ -1,0 +1,6 @@
+{% extends 'body/base.html' %}
+{% block content %}
+{% for task in categories %}
+<p>{{task.title}}</p>
+{% endfor %}
+{% endblock %}
