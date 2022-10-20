@@ -3,6 +3,7 @@ from django.test import TestCase
 from body.models import Task
 
 
+# add string here
 # Create your tests here.
 class TaskTestCase(TestCase):
     def setUp(self):
