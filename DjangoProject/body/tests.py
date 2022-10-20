@@ -22,3 +22,4 @@ class TaskTestCase(TestCase):
         self.assertEqual(task2.get_absolute_url(), home_url)
 
 # trying to modify last commit 2
+# committing for rebase
