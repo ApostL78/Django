@@ -19,3 +19,5 @@ class TaskTestCase(TestCase):
 
         self.assertEqual(task2.__str__(), task2.title)
         self.assertEqual(task2.get_absolute_url(), home_url)
+
+# trying to modify last commit
