@@ -24,3 +24,4 @@ class TaskTestCase(TestCase):
 # trying to modify last commit 2
 # committing for rebase
 # committing for rebase 2
+# last commit before rebase
