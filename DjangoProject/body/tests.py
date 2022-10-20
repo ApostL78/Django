@@ -4,6 +4,7 @@ from body.models import Task
 
 
 # ну че то пишу крч
+# add string here
 # Create your tests here.
 class TaskTestCase(TestCase):
     def setUp(self):
