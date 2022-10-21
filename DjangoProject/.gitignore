@@ -2,3 +2,6 @@ SQLiteStudio/
 **/.idea/
 **/lib/
 .env
+.idea
+/include/
+/venv/
