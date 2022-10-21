@@ -4,3 +4,5 @@ SQLiteStudio/
 .env
 .idea
 /include/
+venv
+include
