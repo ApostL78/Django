@@ -6,3 +6,5 @@ SQLiteStudio/
 /include/
 venv
 include
+.idea/
+bootstrap/
