@@ -8,3 +8,4 @@ venv
 include
 .idea/
 bootstrap/
+static/
