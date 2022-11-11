@@ -8,21 +8,24 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>{% block title %}321{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap"></use>
+        </svg>
         <span class="fs-4">Simple header</span>
-      </a>
-      <ul class="nav nav-pills">
-          {% block navbar %}{% endblock %}
+    </a>
+    <ul class="nav nav-pills">
+        {% block navbar %}{% endblock %}
         <li class="nav-item"><a href="{% url 'home' %}" class="nav-link active" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
-      </ul>
-    </header>
-    {% block content %}{% endblock %}
+    </ul>
+</header>
+{% block content %}{% endblock %}
 
-    {% block for_inclusion_tags %}{% endblock %}
+{% block for_inclusion_tags %}{% endblock %}
 </body>
 </html>
