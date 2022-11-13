@@ -16,6 +16,8 @@ docker compose up --build
 After that, our services is working, but we need to migrate our project:
 ```shell
 docker exec -it django_blog /bin/bash
+```
+```shell
 python DjangoProject/manage.py migrate
 ```
 Now you can navigate to `http://localhost:8000` in your web browser and see, that its working, but we dont have a content.
@@ -31,7 +33,7 @@ exit()
 
 # Expected Result && Clean Up
 After all steps, you should see same image:
-[result](https://github.com/ApostL78/DjangoBlog/blob/master/result.png?raw=true)
+![result](https://github.com/ApostL78/DjangoBlog/blob/master/result.png?raw=true)
 Now you can run following command to stop and delete containers:
 ```shell
 docker compose down
