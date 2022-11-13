@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST=db
+    container_name: postgres_db
+  web:
+    build: .
+    ports:
+      - '8000:8000'
+    image: django-blog:django
+    volumes:
+      - ./data/media:/django/DjangoProject/media
+    container_name: django_blog
+    command: ["python3", "DjangoProject/manage.py", "runserver", "0.0.0.0:8000"]
+    depends_on:
+      - db
