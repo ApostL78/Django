@@ -1,4 +1,4 @@
-# DjangoBlog
+# DjangoBlog [![Django CI](https://github.com/ApostL78/DjangoBlog/actions/workflows/django.yml/badge.svg)](https://github.com/ApostL78/DjangoBlog/actions/workflows/django.yml)
 Django first repo
 # Run with `Docker`
 To start this app without cloning and installing all dependencies you can run it with `docker` ([install](https://www.docker.com/) before usage):
