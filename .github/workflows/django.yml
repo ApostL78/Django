@@ -5,6 +5,14 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+    
+env:
+  SECRET_KEY: reidxewry8ik,@#$%^&*BRBIOVC*^ui
+  DEBUG: True
+  POSTGRES_DB: django_blog_db
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: redcrow34
+  POSTGRES_HOST: localhost
 
 jobs:
   build:
